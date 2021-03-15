@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item
+            android:id="@+id/drawer_menu_all"
+            android:title="Movimentações"
+            android:icon="@drawable/ic_navigate_next"/>
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/drawer_menu_despesas"
+            android:title="Despesas"
+            android:icon="@drawable/ic_navigate_next"/>
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/drawer_menu_receitas"
+            android:title="Receitas"
+            android:icon="@drawable/ic_navigate_next"/>
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/drawer_menu_demonstrativo_receita"
+            android:title="Demonstrativo de Receitas"
+            android:icon="@drawable/ic_navigate_next"/>
+    </group>
+    <group>
+        <item
+            android:id="@+id/drawer_menu_demonstrativo_despesa"
+            android:title="Demonstrativo de Despesas"
+            android:icon="@drawable/ic_navigate_next"/>
+    </group>
+    <group>
+        <item
+            android:id="@+id/grafico"
+            android:title="Grafico"
+            android:icon="@drawable/ic_navigate_next"/>
+    </group>
+</menu>

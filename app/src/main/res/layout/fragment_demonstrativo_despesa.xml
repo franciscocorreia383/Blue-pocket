@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragments.DemonstrativoDespesaFragment">
+
+    <TextView
+        android:id="@+id/demonstrativo_despesa_textview_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Demonstrativo"
+        android:textSize="35sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/demonstrativo_despesa_textview_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:paddingBottom="8dp"
+        android:text="Selecione o mes e ano"
+
+        android:textSize="25sp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/demonstrativo_despesa_textview_title" />
+
+    <Spinner
+        android:id="@+id/demonstrativo_despesa_spinner_mes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/demonstrativo_despesa_separdor"
+        app:layout_constraintTop_toBottomOf="@id/demonstrativo_despesa_textview_select"
+
+        />
+
+    <TextView
+        android:id="@+id/demonstrativo_despesa_separdor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:text="/"
+        android:textSize="20sp"
+
+        app:layout_constraintLeft_toRightOf="@id/demonstrativo_despesa_spinner_mes"
+        app:layout_constraintRight_toLeftOf="@+id/demonstrativo_despesa_spinner_ano"
+        app:layout_constraintTop_toBottomOf="@id/demonstrativo_despesa_textview_select"
+
+        />
+
+    <Spinner
+        android:id="@+id/demonstrativo_despesa_spinner_ano"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintLeft_toRightOf="@id/demonstrativo_despesa_separdor"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/demonstrativo_despesa_textview_select" />
+
+    <Button
+        android:id="@+id/demonstrativo_despesa_button_select"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ripple"
+
+        android:text="Selecionar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/demonstrativo_despesa_spinner_mes"
+
+        />
+
+    <View
+        android:id="@+id/despesa_view1"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+
+        android:layout_marginTop="20dp"
+
+        android:background="#000"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/demonstrativo_despesa_button_select" />
+
+    <TextView
+        android:id="@+id/text_despesa_tot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+
+
+        android:text="Total em despesa:"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/despesa_view1" />
+
+    <TextView
+        android:id="@+id/demonstrativo_despesa_textview_receita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:text="R$:"
+
+
+        android:textSize="15sp"
+        app:layout_constraintLeft_toRightOf="@id/text_despesa_tot"
+        app:layout_constraintTop_toBottomOf="@id/despesa_view1" />
+
+    <View
+        android:id="@+id/despesa_view2"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+
+        android:layout_marginTop="20dp"
+
+        android:background="#000"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_despesa_tot" />
+
+    <TextView
+        android:id="@+id/edittext_despesa_title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:text="Suas 5 maiores receitas: "
+
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/despesa_view2"
+
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/demonstrativo_despesa_recycleview_receita"
+        android:layout_width="410dp"
+        android:layout_height="428dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edittext_despesa_title2"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

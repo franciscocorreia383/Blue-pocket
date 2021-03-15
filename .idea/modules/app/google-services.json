@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "67961651704",
+    "firebase_url": "https://bluepocket-fc320.firebaseio.com",
+    "project_id": "bluepocket-fc320",
+    "storage_bucket": "bluepocket-fc320.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:67961651704:android:12754a8ab480a05d75d60d",
+        "android_client_info": {
+          "package_name": "com.example.bluepocket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "67961651704-un1u805kgeb4244rae7fgfe9e69bu6sd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bluepocket",
+            "certificate_hash": "667b4f3b268fc84e52f8a46df7d8f027c7a334e6"
+          }
+        },
+        {
+          "client_id": "67961651704-et1quqp3ibid8kon21jmkdbcvs5nl0sa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCi0JvkvGLNdh7ws6MPK-3wCiKAdJEYjS0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "67961651704-et1quqp3ibid8kon21jmkdbcvs5nl0sa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

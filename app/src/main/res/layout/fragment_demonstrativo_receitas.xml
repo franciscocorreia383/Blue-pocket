@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragments.DemonstrativoReceitaFragment">
+
+    <TextView
+        android:id="@+id/demonstrativo_textview_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Demonstrativo"
+        android:textSize="35sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/demonstrativo_textview_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:paddingBottom="8dp"
+        android:text="Selecione o mes e ano"
+
+        android:textSize="25sp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/demonstrativo_textview_title" />
+
+    <Spinner
+        android:id="@+id/demonstrativo_spinner_mes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/demonstrativo_separdor"
+        app:layout_constraintTop_toBottomOf="@id/demonstrativo_textview_select"
+
+        />
+
+    <TextView
+        android:id="@+id/demonstrativo_separdor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:text="/"
+        android:textSize="20sp"
+
+        app:layout_constraintLeft_toRightOf="@id/demonstrativo_spinner_mes"
+        app:layout_constraintRight_toLeftOf="@+id/demonstrativo_spinner_ano"
+        app:layout_constraintTop_toBottomOf="@id/demonstrativo_textview_select"
+
+        />
+
+    <Spinner
+        android:id="@+id/demonstrativo_spinner_ano"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintLeft_toRightOf="@id/demonstrativo_separdor"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/demonstrativo_textview_select" />
+
+    <Button
+        android:id="@+id/demonstrativo_button_select"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ripple"
+
+        android:text="Selecionar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/demonstrativo_spinner_mes"
+
+        />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+
+        android:layout_marginTop="20dp"
+
+        android:background="#000"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/demonstrativo_button_select" />
+
+    <TextView
+        android:id="@+id/text_tot_rec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+
+
+        android:text="Total em receita:"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view1" />
+
+    <TextView
+        android:id="@+id/demonstrativo_textview_receita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:text="R$:"
+
+
+        android:textSize="15sp"
+        app:layout_constraintLeft_toRightOf="@id/text_tot_rec"
+        app:layout_constraintTop_toBottomOf="@id/view1" />
+
+       <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+
+        android:layout_marginTop="20dp"
+
+        android:background="#000"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_tot_rec" />
+
+    <TextView
+        android:id="@+id/edittext_title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:text="Suas 5 maiores receitas: "
+
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view2"
+
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/demonstrativo_recycleview_receita"
+        android:layout_width="410dp"
+        android:layout_height="428dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edittext_title2"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

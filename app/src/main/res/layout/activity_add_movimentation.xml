@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".view.activities.AddMovimentationActivity"
+    android:layout_marginTop="40dp">
+
+    <TextView
+        android:id="@+id/add_textview_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:gravity="top|center"
+        android:text="Adicionar Movimentação"
+        android:textSize="32dp"
+
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/add_textview_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="40dp"
+        android:text="Nome:"
+
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_textview_title" />
+
+    <EditText
+        android:id="@+id/add_edittext_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_textview_name" />
+
+    <TextView
+        android:id="@+id/add_textview_tipo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:text="Tipo:"
+
+        android:textSize="25sp"
+        app:layout_constraintRight_toLeftOf="@id/add_spinner_type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_edittext_name" />
+
+    <Spinner
+        android:id="@+id/add_spinner_type"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/add_button_addtype"
+        app:layout_constraintTop_toBottomOf="@id/add_textview_tipo" />
+
+    <ImageButton
+        android:id="@+id/add_button_addtype"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        android:src="@drawable/ic_add"
+        android:background="@drawable/ripple"
+
+        app:layout_constraintLeft_toRightOf="@id/add_spinner_type"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_textview_tipo"
+        />
+
+    <TextView
+        android:id="@+id/add_textview_valor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="30dp"
+        android:text="Valor:"
+
+        android:textSize="25sp"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_spinner_type" />
+
+    <EditText
+        android:id="@+id/add_edittext_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:hint="R$: "
+
+        android:inputType="numberDecimal"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_textview_valor" />
+
+    <Button
+        android:id="@+id/add_button_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="30dp"
+        android:text="Data:"
+
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_edittext_value" />
+
+    <TextView
+        android:id="@+id/add_textview_datetv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_button_date" />
+
+    <TextView
+        android:id="@+id/add_textview_title_movimentation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="30dp"
+        android:text="Movimentação:"
+
+        android:textSize="25sp"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_textview_datetv" />
+
+    <RadioGroup
+        android:id="@+id/add_radiogroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="5dp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_textview_title_movimentation">
+
+        <RadioButton
+            android:id="@+id/add_radio_receita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Receita" />
+
+        <RadioButton
+            android:id="@+id/add_radio_despesa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Despesa" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/add_button_addmovimentation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ripple"
+        android:text="ADICIONAR"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintRight_toRightOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/add_radiogroup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
